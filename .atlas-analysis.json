@@ -1,0 +1,95 @@
+{
+  "projectType": "saas",
+  "projectName": "Music Tracker",
+  "projectDescription": "Full-stack app for requesting metadata of a music track from Spotify by ISRC with PostgreSQL storage.",
+  "theme": "palm",
+  "primaryColor": "#1c1414",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "architecture"
+            ]
+          },
+          {
+            "group": "Backend",
+            "pages": [
+              "backend/setup",
+              "backend/configuration",
+              "backend/authentication",
+              "backend/database",
+              "backend/spotify-integration",
+              "backend/testing"
+            ]
+          },
+          {
+            "group": "Frontend",
+            "pages": [
+              "frontend/setup",
+              "frontend/configuration",
+              "frontend/features",
+              "frontend/authentication",
+              "frontend/testing"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/local",
+              "deployment/docker",
+              "deployment/production",
+              "deployment/environment-variables"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Endpoints",
+            "pages": [
+              "api-reference/overview",
+              "api-reference/register-track",
+              "api-reference/get-track",
+              "api-reference/get-cover"
+            ]
+          },
+          {
+            "group": "Resources",
+            "pages": [
+              "api-reference/authentication",
+              "api-reference/errors"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Register music tracks by ISRC from Spotify",
+    "Store track metadata in PostgreSQL",
+    "Retrieve track details and cover images",
+    "HTTP Basic authentication",
+    "React SPA frontend with Redux",
+    "Spring Boot REST API with OpenAPI/Swagger",
+    "Docker deployment support",
+    "Hexagonal architecture design"
+  ],
+  "publicApiSurface": [
+    "POST /tracker/api/v1/tracks - Register track by ISRC",
+    "GET /tracker/api/v1/tracks/{isrCode} - Get track metadata",
+    "GET /tracker/api/v1/tracks/{isrCode}/cover - Get track cover image",
+    "GET /tracker/actuator/health - Health check endpoint",
+    "GET /tracker/swagger-ui.html - Swagger UI documentation",
+    "GET /tracker/api-docs - OpenAPI JSON specification"
+  ]
+}
